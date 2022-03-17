@@ -1,0 +1,14 @@
+/* .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+} */
+
+.logo {
+  text-align: left;
+}
+.item:nth-child(2) {
+  text-align: right;
+}

@@ -1,30 +1,25 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+h2 {
+  font-size: 2rem;
+  font-weight: 200;
 }
 
-body {
-  font-family: Lato;
-  background-color: #0d4f8b;
+h3 {
+  font-size: 3rem;
 }
 
-.container {
+/* .container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
   align-content: center;
-}
+} */
 
-.item {
+/* .item {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   cursor: pointer;
-}
-
-.card {
   text-align: center;
   padding: 10px;
   margin: 10px;
@@ -33,10 +28,21 @@ body {
   border-radius: 4px;
   height: 350px;
   width: 350px;
+} */
+
+button {
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  padding: 15px;
+  min-height: 30px;
+  min-width: 120px;
+  border: none;
 }
 
-/* .fiftywidth {
-  position: relative;
-  float: left;
-  width: 50%;
-} */
+button:hover {
+  background-color: #002ead;
+  transition: 0.7s;
+  color: #fff;
+  font-weight: 600;
+}
