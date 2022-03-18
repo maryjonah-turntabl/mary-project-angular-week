@@ -2,11 +2,12 @@
     <div [className]="'item card'">
         <h2>{{weather?.name}}</h2>
         <h4>{{weatherDescription?.description}}</h4>
-        <span *ngIf="btnState">
-            <h3>{{degree_celsius | number : '1.2-2'}} °C</h3>
+
+        <div *ngIf="btnState">
+            <h3>{{degree_celsius - degree_celsius % 1}} °C</h3>
             <button (click) = "loadFahrenheit()">Convert to Fahrenheit</button>
-    
-        </span>
+        </div>
+
         <span *ngIf="!btnState">
             <h3>{{degree_fahrenheit | number : '1.2-2'}}°F</h3>
             <button (click) = "loadCelsius()">Convert to Celsius</button>
@@ -18,7 +19,6 @@
         <h2>Country: {{weather?.sys?.country}}</h2>
         <p>Longitude: {{weather?.coord?.lon}}</p>
         <p>Latitude: {{weather?.coord?.lat}}</p>
-        <p>Time: </p>
     </div>
 </div>
 

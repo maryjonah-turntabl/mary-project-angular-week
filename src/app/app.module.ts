@@ -7,6 +7,8 @@ import { WeatherdataService } from './Services/weatherdata.service';
 import { HttpClientModule } from '@angular/common/http';
 import { WeatherCardComponent } from './components/weather-card/weather-card.component';
 import { AboutAppComponent } from './components/about-app/about-app.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { RetrospectiveComponent } from './components/retrospective/retrospective.component';
 
 
 @NgModule({
@@ -14,11 +16,13 @@ import { AboutAppComponent } from './components/about-app/about-app.component';
     AppComponent,
     WeatherCardComponent,
     AboutAppComponent,
+    RetrospectiveComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FontAwesomeModule
   ],
   providers: [WeatherdataService,],
   bootstrap: [AppComponent]

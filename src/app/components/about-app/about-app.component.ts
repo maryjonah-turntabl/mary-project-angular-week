@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { faBook, faCoffee, faPeopleGroup, faHandPointRight } from '@fortawesome/free-solid-svg-icons';
+
 
 @Component({
   selector: 'app-about-app',

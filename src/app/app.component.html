@@ -1,6 +1,6 @@
 <div [className]="'container'">
-    <div [className]="'item logo'">Mary's App</div>
-    <nav [className]="'item'">
+    <div [className]="'logo item nav-component'">Mary's App</div>
+    <nav [className]="'item nav-component'">
         <ul [className]="'nav-list'">
             <li [className]="'nav-item'">
                 <a [routerLink] = "''">Home</a>
@@ -9,7 +9,8 @@
                 <a [routerLink] = "'/about'">About</a>
             </li>
             <li [className]="'nav-item'">
-                <a href="#">Contact</a>
+                <a [routerLink] = "'/retro'">Retrospective</a>
+
             </li>
         </ul>
     </nav>

@@ -5,8 +5,8 @@
 }
 
 body {
-  font-family: Lato;
   background-color: #0d4f8b;
+  font-family: "Muli";
 }
 
 .container {
@@ -21,7 +21,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  cursor: pointer;
 }
 
 .card {
@@ -31,12 +30,6 @@ body {
   border: 1px solid none;
   background-color: #fff;
   border-radius: 4px;
-  height: 350px;
+  height: 450px;
   width: 350px;
 }
-
-/* .fiftywidth {
-  position: relative;
-  float: left;
-  width: 50%;
-} */
