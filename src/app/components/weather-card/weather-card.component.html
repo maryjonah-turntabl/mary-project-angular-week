@@ -1,25 +1,31 @@
 <div [className]="'container'">
     <div [className]="'item card'">
         <h2>{{weather?.name}}</h2>
+        <span *ngIf="weatherDescription?.main =='Clouds'">
+            <fa-icon [icon]="faCloud" size="3x" ></fa-icon>
+        </span>
         <h4>{{weatherDescription?.description}}</h4>
 
         <div *ngIf="btnState">
-            <h3>{{degree_celsius - degree_celsius % 1}} °C</h3>
+            <h3>{{degree_celsius - degree_celsius % 1}}°C</h3>
             <button (click) = "loadFahrenheit()">Convert to Fahrenheit</button>
         </div>
 
         <span *ngIf="!btnState">
-            <h3>{{degree_fahrenheit | number : '1.2-2'}}°F</h3>
+            <h3>{{degree_fahrenheit - degree_fahrenheit % 1}}°F</h3>
             <button (click) = "loadCelsius()">Convert to Celsius</button>
     
         </span>
     </div>
 
-    <div [className]="'item card'">
+    <div [className]="'item card second-card'">
         <h2>Country: {{weather?.sys?.country}}</h2>
+        <fa-icon [icon]="faFlag" size="3x" ></fa-icon>
+        <p>{{ currentDate | date: 'dd/MM/yyyy' }}</p>
         <p>Longitude: {{weather?.coord?.lon}}</p>
         <p>Latitude: {{weather?.coord?.lat}}</p>
     </div>
+
 </div>
 
 

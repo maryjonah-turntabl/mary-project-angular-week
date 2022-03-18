@@ -6,6 +6,7 @@ import { Coordinates } from "./Coordinates";
 
 export interface Weather {
     name: String;
+    dt: number;
     main: TempDetails;
     weather: WeatherDescription[];
     sys: CountryName;

@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { WeatherdataService } from 'src/app/Services/weatherdata.service';
 import { Weather } from 'src/app/models/Weather';
 import { WeatherDescription } from 'src/app/models/WeatherDescription';
+import { faCloud, faSun, faFlag } from '@fortawesome/free-solid-svg-icons';
+
 
 @Component({
   selector: 'app-weather-card',
@@ -13,12 +15,17 @@ export class WeatherCardComponent implements OnInit {
   weather?: Weather;
   weatherDescription!: WeatherDescription;
 
+  // variables to switch between temperature values
   degree_fahrenheit: number = 0;
   degree_celsius: number = 0;
   btnState = true;
 
-  // weatherDescription: String = "";
-  
+  currentDate = new Date();
+
+  // fontawesome
+  faCloud = faCloud
+  faFlag=faFlag
+
 
   constructor(private weatherService: WeatherdataService) { }
 
@@ -31,8 +38,6 @@ export class WeatherCardComponent implements OnInit {
       this.weather = data;
       this.degree_celsius = this.weather.main.temp - 274.15;
       this.weatherDescription = this.weather?.weather[0];
-      //this.weatherDescription = this.weather && this.weather?.weather[0] ? this.weather?.weather[0]?.description : "test";
-      // debugger
       console.log(this.weather);
     })
   }
@@ -49,5 +54,4 @@ export class WeatherCardComponent implements OnInit {
     return this.degree_celsius
   }
 
-  
 }

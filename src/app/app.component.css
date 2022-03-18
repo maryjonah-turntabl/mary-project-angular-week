@@ -30,6 +30,9 @@ ul.nav-list li {
   }
   ul.nav-list {
     text-align: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 70px;
   }
   ul.nav-list li {
     padding-left: 0;
@@ -40,5 +43,16 @@ ul.nav-list li {
   }
   .nav-component {
     padding: 10px 0;
+  }
+  .menu-elements {
+    position: fixed;
+    bottom: 0;
+    height: 50px;
+    background-color: #0d8b88;
+    opacity: 0.8;
+    color: #fff;
+    font-weight: bold;
+    width: 100%;
+    display: inline;
   }
 }
